@@ -24,6 +24,7 @@ import { useDataStore } from '@/stores/data'
 import { usePlayerStore } from '@/stores/player'
 import { usePopupStore } from '@/stores/popup'
 import { useLoaderStore } from '@/stores/loader'
+import { useSettingsStore } from '@/stores/settings'
 
 // Store defenition
 const infoStore = useInfoStore();
@@ -31,16 +32,19 @@ const dataStore = useDataStore();
 const playerStore = usePlayerStore();
 const popupStore = usePopupStore();
 const loaderStore = useLoaderStore();
+const settingsStore = useSettingsStore();
+
 
 // Getters from stores
 const { info } = storeToRefs(infoStore);
 const { autoplay } = storeToRefs(playerStore);
 const { isPopupActive } = storeToRefs(popupStore);
-const { isLoading } = storeToRefs(loaderStore)
+const { isLoading } = storeToRefs(loaderStore);
 
 // Actions from stores
 const { getData, setUpdate } = dataStore;
 const { play } = playerStore;
+const { setFullscreenState } = settingsStore;
 
 onMounted(async () => {
   logger.message('message', 'APP', 'Initialazing player');

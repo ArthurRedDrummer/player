@@ -19,6 +19,10 @@ export default {
         'button-sound-on-white': `url(@/assets/images/icons/sound-on-white.svg)`,
         'button-sound-on-black': `url(@/assets/images/icons/sound-on-black.svg)`,
         'button-sound-off': `url(@/assets/images/icons/sound-off-colored.svg)`,
+        'button-fullscreen-on-black': `url(@/assets/images/icons/fullscreen-on-black.svg)`,
+        'button-fullscreen-on-white': `url(@/assets/images/icons/fullscreen-on-white.svg)`,
+        'button-fullscreen-off-black': `url(@/assets/images/icons/fullscreen-off-black.svg)`,
+        'button-fullscreen-off-white': `url(@/assets/images/icons/fullscreen-off-white.svg)`,
       },
       backgroundPosition: {
         'arrow-position': 'right 8px center'

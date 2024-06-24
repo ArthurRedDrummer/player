@@ -9,6 +9,9 @@
                 <player-volume />
                 <player-time />
             </div>
+            <div class="flex flex-row justify-start items-center gap-5">
+                <player-fullscreen />
+            </div>
         </div>
     </footer>
 </template>
@@ -18,4 +21,6 @@ import PlayerProgress from '@/components/elements/PlayerProgress.vue'
 import PlayerControl from '@/components/elements/PlayerControl.vue'
 import PlayerTime from '@/components/elements/PlayerTime.vue'
 import PlayerVolume from '@/components/elements/PlayerVolume.vue'
+
+import PlayerFullscreen from '@/components/elements/settings/PlayerFullscreen.vue'
 </script>
