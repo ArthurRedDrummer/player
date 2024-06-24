@@ -1,0 +1,17 @@
+.popup-enter-active,
+.popup-leave-active {
+    @apply transition duration-300 ease-in-out;
+
+    .player-popup-window {
+        @apply transition duration-300 ease-in-out;
+    }
+}
+
+.popup-enter-from,
+.popup-leave-to {
+    @apply opacity-0;
+
+    .player-popup-window {
+        @apply scale-90;
+    }
+}

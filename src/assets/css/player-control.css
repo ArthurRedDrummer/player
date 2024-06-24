@@ -1,0 +1,3 @@
+.player-control {
+    @apply flex flex-row justify-start items-center gap-4;
+}

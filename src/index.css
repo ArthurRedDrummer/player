@@ -1,0 +1,17 @@
+@import '@/assets/css/animation.css';
+@import '@/assets/css/transitions.css';
+@import '@/assets/css/buttons.css';
+@import '@/assets/css/player-app.css';
+@import '@/assets/css/player-header.css';
+@import '@/assets/css/player-main.css';
+@import '@/assets/css/player-popup.css';
+@import '@/assets/css/player-control.css';
+@import '@/assets/css/player-loader.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	@apply bg-black;
+}
