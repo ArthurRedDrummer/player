@@ -63,3 +63,15 @@
 		@apply bg-white bg-button-fullscreen-off-black duration-200 ease-in-out;
 	}
 }
+
+.button-speed {
+	@apply h-8 w-8 bg-transparent rounded-md transition-colors duration-200 ease-in-out text-white;
+
+	&:hover {
+		@apply bg-white duration-200 ease-in-out text-black;
+	}
+
+	&.active {
+		@apply bg-white duration-200 ease-in-out text-black;
+	}
+}

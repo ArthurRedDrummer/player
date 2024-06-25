@@ -61,6 +61,10 @@ export const usePlayerStore = defineStore('playerStore', () => {
 		currentPosition.value = mainPlayer.value.currentTime.toFixed(0)
 	}
 
+	const setSpeed = async (speed) => {
+		mainPlayer.value.playbackRate = speed
+	}
+
 	return {
 		isPlayerPlaying,
 		$elems,
@@ -73,5 +77,6 @@ export const usePlayerStore = defineStore('playerStore', () => {
 		rewind,
 		setVolume,
 		setPosition,
+		setSpeed
 	}
 })

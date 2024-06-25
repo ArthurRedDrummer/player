@@ -10,6 +10,7 @@
                 <player-time />
             </div>
             <div class="flex flex-row justify-start items-center gap-5">
+                <player-speed />
                 <player-fullscreen />
             </div>
         </div>
@@ -23,4 +24,5 @@ import PlayerTime from '@/components/elements/PlayerTime.vue'
 import PlayerVolume from '@/components/elements/PlayerVolume.vue'
 
 import PlayerFullscreen from '@/components/elements/settings/PlayerFullscreen.vue'
+import PlayerSpeed from '@/components/elements/settings/PlayerSpeed.vue'
 </script>
