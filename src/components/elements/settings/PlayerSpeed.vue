@@ -1,5 +1,5 @@
 <template>
-  <div class="relative">
+  <div v-if="isAvailable" class="relative">
     <button class="button-speed text-sm font-bold" :class="{
       'active': isVisible
     }" v-text="current" @click.prevent="toggleList" />
@@ -19,10 +19,14 @@
 <script setup>
 import { ref, computed } from 'vue'
 import { usePlayerStore } from '@/stores/player'
+import { useInfoStore } from '@/stores/info';
+import { storeToRefs } from 'pinia';
 
 const playerStore = usePlayerStore();
+const infoStore = useInfoStore();
 
 const { setSpeed } = playerStore;
+const { info } = storeToRefs(infoStore);
 
 const current = ref(1);
 const values = ref([0.5, 0.75, 1, 1.5, 2]);
@@ -35,6 +39,14 @@ const speedList = computed(() => values.value.map(item => {
     isActive: item === current.value
   }
 }));
+
+const isAvailable = computed(() => {
+  if (info.value.type === 'live') {
+    return false;
+  }
+
+  return true;
+})
 
 function toggleList() {
   isVisible.value = !isVisible.value;
