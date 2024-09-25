@@ -1,8 +1,0 @@
-.player-loader {
-    @apply fixed top-0 left-0 h-full w-full flex justify-center items-center z-50 bg-black bg-opacity-50;
-
-    img {
-        @apply h-10 w-10;
-        animation: loader 1s linear infinite;
-    }
-}

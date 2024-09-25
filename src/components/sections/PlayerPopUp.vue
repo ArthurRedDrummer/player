@@ -1,14 +1,14 @@
 <template>
-    <div class="player-popup">
-        <div class="player-popup-window">
-            <header class="player-popup-header">
+    <div class="fixed top-0 left-0 w-[100%] h-[100%] bg-black bg-opacity-50 z-20 flex justify-start items-center">
+        <div class="m-auto bg-white p-6 rounded-md min-w-80">
+            <header class="flex flex-row justify-end items-center">
                 <button class="button-close" @click.prevent="togglePopup"></button>
             </header>
-            <div class="player-popup-icon"></div>
-            <h2 class="player-popup-title">
+            <div class="flex bg-transparent bg-popup-warning bg-cover bg-center mx-auto mb-4 h-16 w-16"></div>
+            <h2 class="text-black text-center">
                 {{ data?.title }}
             </h2>
-            <div class="player-popup-control" v-if="showControl">
+            <div class="flex flex-col gap-2 mt-4" v-if="showControl">
                 <button class="button-full-primary">Action</button>
             </div>
         </div>

@@ -1,5 +1,5 @@
 <template>
-    <header class="player-header">
+    <header class="fixed top-0 left-0 z-30 p-4 w-full">
         <player-about />
     </header>
 </template>

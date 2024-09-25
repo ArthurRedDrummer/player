@@ -1,5 +1,5 @@
 <template>
-    <div class="player-control">
+    <div class="flex flex-row justify-start items-center gap-4">
         <button class="button-prev" v-if="hasPlaylist" />
         <button :class="{
             'button-play': !isPlayerPlaying,

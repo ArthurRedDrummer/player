@@ -1,6 +1,7 @@
 <template>
-	<video ref="main" class="player-main-hls" @canplay="hideLoader" @waiting="showLoader" @timeupdate="setPosition" />
-	<img class="player-main-preview" v-if="preview" :src="preview" alt="" />
+	<video ref="main" class="fixed top-0 left-0 w-full h-full z-20" @canplay="hideLoader" @waiting="showLoader"
+		@timeupdate="setPosition" />
+	<img class="fixed top-0 left-0 w-full h-full z-10 object-contain" v-if="preview" :src="preview" alt="" />
 </template>
 
 <script setup>
