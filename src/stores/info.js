@@ -17,14 +17,22 @@ const testData = [
 ]
 
 export const useInfoStore = defineStore('infoStore', () => {
-	const test = 'audio'
-	const media = testData.find(item => item.type === test)
+	const url = new URL(window.location.href);
+	
+	const test = 'video';	
+	const media = testData.find(item => item.type === test);
+	const type = ref(media.type);
+	const id = ref(media.id);
 
-	const type = ref(media.type)
-	const id = ref(media.id)
+	if (url.pathname !== '/') {
+		const arr = url.pathname.split('/').filter(item => item);
 
-	const volume = ref(0)
-	const autoplay = ref(false)
+		type.value = arr[0];
+		id.value = arr[1];
+	}
+
+	const volume = ref(0);
+	const autoplay = ref(false);
 
 	const info = computed(() => {
 		return {
