@@ -34,7 +34,9 @@ function toggleList() {
     : settingsStore.showSpeedList();
 }
 
-onClickOutside(() => {
-  settingsStore.hideSpeedList();
+onClickOutside(target, () => {
+  if (isSpeedListVisible.value) {
+    settingsStore.hideSpeedList();
+  }
 })
 </script>

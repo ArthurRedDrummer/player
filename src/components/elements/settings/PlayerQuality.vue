@@ -32,7 +32,9 @@ function toggleList() {
     : settingsStore.showQualityList();
 }
 
-onClickOutside(() => {
-  settingsStore.hideQualityList();
+onClickOutside(target, () => {
+  if (isQualityListVisible.value) {
+    settingsStore.hideQualityList(); 
+  }
 })
 </script>
