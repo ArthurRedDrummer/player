@@ -1,5 +1,5 @@
 <template>
-  <time class="text-xs text-white font-monospace cursor-pointer" @click.prevent="switchType" v-text="time" />
+  <time class="text-xs text-white font-monospace cursor-pointer select-none" @click.prevent="switchType" v-text="time" />
 </template>
 
 <script setup>

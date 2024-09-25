@@ -1,11 +1,16 @@
 import Hls from 'hls.js'
 import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
+import { useSettingsStore } from './settings'
 
 export const usePlayerStore = defineStore('playerStore', () => {
+	const settingsStore = useSettingsStore();
+
 	const currentPosition = ref(0)
 	const isPlaying = ref(false)
 	const mainPlayer = ref(null)
+
+	let hls = null;
 
 	const isPlayerPlaying = computed(() => isPlaying.value)
 
@@ -26,10 +31,13 @@ export const usePlayerStore = defineStore('playerStore', () => {
 			if (mainPlayer.value.canPlayType('application/vnd.apple.mpegurl')) {
 				mainPlayer.value.src = source
 			} else if (Hls.isSupported()) {
-				let hls = new Hls()
-
+				hls = new Hls()
 				hls.loadSource(source)
 				hls.attachMedia(mainPlayer.value)
+
+				hls.on(Hls.Events.MANIFEST_PARSED, function (event, data) {
+					settingsStore.setQualityList(hls.levels);
+				});
 			}
 		}
 	}
@@ -65,6 +73,10 @@ export const usePlayerStore = defineStore('playerStore', () => {
 		mainPlayer.value.playbackRate = speed
 	}
 
+	const setLevel = async (level) => {
+		hls.nextLevel = level
+	}
+
 	return {
 		isPlayerPlaying,
 		$elems,
@@ -77,6 +89,7 @@ export const usePlayerStore = defineStore('playerStore', () => {
 		rewind,
 		setVolume,
 		setPosition,
-		setSpeed
+		setSpeed,
+		setLevel
 	}
 })

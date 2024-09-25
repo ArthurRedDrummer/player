@@ -32,6 +32,14 @@
 	}
 }
 
+.button-options {
+	@apply h-8 w-8 bg-transparent bg-button-options-white bg-cover rounded-md transition-colors duration-200 ease-in-out;
+
+	&:hover {
+		@apply bg-white bg-button-options-black duration-200 ease-in-out;
+	}
+}
+
 .button-mute-on {
 	@apply h-8 w-8 bg-transparent bg-button-sound-off bg-cover rounded-md transition-colors duration-200 ease-in-out;
 

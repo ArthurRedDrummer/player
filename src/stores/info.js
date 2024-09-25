@@ -17,7 +17,7 @@ const testData = [
 ]
 
 export const useInfoStore = defineStore('infoStore', () => {
-	const test = 'live'
+	const test = 'video'
 	const media = testData.find(item => item.type === test)
 
 	const type = ref(media.type)

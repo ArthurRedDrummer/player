@@ -5,6 +5,9 @@ export default {
   ],
   theme: {
     extend: {
+      colors: {
+        'accent-red': '#FF0000'
+      },
       backgroundImage: {
         'black-arrow': `url(@/assets/images/icons/arrow-black.svg)`,
         'popup-warning': `url(@/assets/images/icons/popup-warning.svg)`,
@@ -16,6 +19,8 @@ export default {
         'button-prev-white': `url(@/assets/images/icons/previous-white.svg)`,
         'button-next-black': `url(@/assets/images/icons/next-black.svg)`,
         'button-next-white': `url(@/assets/images/icons/next-white.svg)`,
+        'button-options-black': `url(@/assets/images/icons/options-black.svg)`,
+        'button-options-white': `url(@/assets/images/icons/options-white.svg)`,
         'button-sound-on-white': `url(@/assets/images/icons/sound-on-white.svg)`,
         'button-sound-on-black': `url(@/assets/images/icons/sound-on-black.svg)`,
         'button-sound-off': `url(@/assets/images/icons/sound-off-colored.svg)`,

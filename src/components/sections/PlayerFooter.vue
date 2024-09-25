@@ -12,6 +12,7 @@
             <div class="flex flex-row justify-start items-center gap-5">
                 <player-speed />
                 <player-fullscreen />
+                <player-quality />
             </div>
         </div>
     </footer>
@@ -22,6 +23,7 @@ import PlayerProgress from '@/components/elements/PlayerProgress.vue'
 import PlayerControl from '@/components/elements/PlayerControl.vue'
 import PlayerTime from '@/components/elements/PlayerTime.vue'
 import PlayerVolume from '@/components/elements/PlayerVolume.vue'
+import PlayerQuality from '@/components/elements/settings/PlayerQuality.vue'
 
 import PlayerFullscreen from '@/components/elements/settings/PlayerFullscreen.vue'
 import PlayerSpeed from '@/components/elements/settings/PlayerSpeed.vue'
